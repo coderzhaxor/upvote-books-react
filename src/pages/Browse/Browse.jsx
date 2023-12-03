@@ -3,12 +3,14 @@ import VoteCard from '../../components/Card/VoteCard';
 import books from '../../data/Api';
 
 export default function Browse() {
+    const filteredBook = books.filter((books) => books.status === 'Not Purchased');
+
     return (
         <>
             <div className="mx-auto max-w-5xl px-8 mt-20">
                 <SearchBooks />
             </div>
-            <VoteList books={books} />
+            <VoteList books={filteredBook} />
         </>
     );
 }

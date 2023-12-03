@@ -18,10 +18,8 @@ export default function App() {
                 <Routes>
                     <Route element={<UserLayout />}>
                         <Route index Component={Home} />
-                        <Route path="/browse">
-                            <Route index Component={Browse} />
-                            <Route path=":bookId" Component={BrowseDetails} />
-                        </Route>
+                        <Route path="/browse" Component={Browse} />
+                        <Route path="/book/:bookId" Component={BrowseDetails} />
                         <Route path="/purchased" Component={Purchased} />
                         <Route path="/vote" Component={Vote} />
                         <Route path="/about" Component={About} />
