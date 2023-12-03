@@ -18,3 +18,18 @@ nav ul li a::after {
 main .input {
     @apply px-2 py-3 bg-white/10 rounded-md focus:ring-2 focus:ring-blue-500 outline-none;
 }
+
+#hero-illustration {
+    animation: gravity 3000ms infinite ease-in-out;
+}
+
+@keyframes gravity {
+    from {transform: translateY(0);}
+    25% {transform: translateY(4px);}
+    50% {transform: translateY(0);}
+    to {transform: translateY(-4px);}
+}
+
+.profile-menu.active {
+    @apply bg-indigo-600;
+}

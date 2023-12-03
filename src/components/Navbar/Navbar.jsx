@@ -18,7 +18,7 @@ export default function Navbar() {
                 <img src={Logo} alt="logo" />
             </a>
             <ul
-                className={`flex flex-row max-md:absolute max-md:top-full max-md:left-0 max-md:px-10 py-4 sm:py-8 md:py-0 max-md:bg-[#050426] max-md:border-y max-md:border-white/5 z-50 max-md:w-full items-center gap-4 md:-ml-28 order-1 md:order-2 justify-center`}
+                className={`flex flex-row max-md:absolute max-md:top-full max-md:left-0 max-md:px-10 py-4 sm:py-8 md:py-0 max-md:bg-[#050426] max-md:border-y max-md:border-white/5 z-50 max-md:w-full items-center gap-4 md:-ml-36 order-1 md:order-2 justify-center`}
             >
                 {menus.map((menu, index) => (
                     <li key={index}>
@@ -28,9 +28,9 @@ export default function Navbar() {
                     </li>
                 ))}
             </ul>
-            <div className="profile rounded-full order-3">
+            <a href="/profile" className="profile rounded-full order-3">
                 <img src={Profile} />
-            </div>
+            </a>
         </nav>
     );
 }

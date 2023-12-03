@@ -1,4 +1,3 @@
-import React from 'react';
 import BookCard from '../../components/Card/BookCard';
 import books from '../../data/Api';
 
@@ -23,7 +22,7 @@ function HeroSection() {
             </div>
             <div className="hero-img relative">
                 <img src="/src/assets/svg/gradient-hero.svg" alt="gradient hero" className="absolute top-[30%] -right-0" />
-                <img src="/src/assets/svg/hero-img.svg" alt="hero-img" />
+                <img src="/src/assets/svg/hero-img.svg" alt="hero-img" id="hero-illustration" />
             </div>
         </section>
     );

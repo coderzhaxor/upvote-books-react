@@ -1,6 +1,6 @@
 export default function Vote() {
     return (
-        <form action="" method="POST" enctype="multipart/form-data" class="max-w-5xl mx-auto mt-20">
+        <form action="" method="POST" enctype="multipart/form-data" class="max-w-5xl mx-auto mt-20 px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-4 gap-10 md:gap-6 items-center text-gray-300">
                 <label for="image" class="group md:col-span-1 md:row-span-4 border-2 border-dashed border-white/50 hover:border-indigo-600/50 cursor-pointer rounded-xl h-full flex flex-col items-center justify-center py-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="150" height="100" viewBox="0 0 24 24" class="text-white/50 group-hover:text-indigo-600/50">

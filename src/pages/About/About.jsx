@@ -1,13 +1,13 @@
 export default function About() {
     return (
-        <section id="about" className="flex flex-col max-w-5xl mx-auto mt-20">
-            <h1 className="text-center font-bold text-4xl mb-6">About Upvote Books</h1>
-            <p className="text-center text-xl text-white/70 mb-10">
+        <section id="about" className="flex flex-col max-w-5xl mx-auto mt-28 md:mt-20">
+            <h1 className="text-center font-bold text-2xl md:text-4xl mb-6">About Upvote Books</h1>
+            <p className="text-center text-sm px-4 md:text-xl text-white/70 mb-10">
                 Upvote Books gives students the power to influence their campus library's collection. By suggesting and voting for book titles, you can ensure that the books you are most interersted in reading are made available to you. It's a simple
                 and effective way to have a direct say in shaping your library's collection.
             </p>
 
-            <div id="features" class="w-full grid grid-cols-2 grid-rows-2 lg:grid-cols-3 md:grid-rows-1 gap-4 mb-10">
+            <div id="features" class="w-full grid grid-cols-2 grid-rows-2 lg:grid-cols-3 md:grid-rows-1 gap-4 mb-10 mx-auto px-4 mt-4">
                 <Features />
             </div>
         </section>
@@ -40,7 +40,7 @@ function Features() {
         <>
             <h2 class="col-span-3 row-span-2 text-lg">What we deserve</h2>
             {featuresDetails.map((feature) => (
-                <div class="feature w-full col-span-2 md:col-span-1 p-6 bg-gradient-to-br from-white/10 from-10% to-transparent via-white/5 hover:from-10% transition-all duration-300 rounded-md" key={feature.number}>
+                <div class="feature w-full col-span-3 md:col-span-2 lg:col-span-1 p-6 bg-gradient-to-br from-white/10 from-10% to-transparent via-white/5 hover:from-10% transition-all duration-300 rounded-md" key={feature.number}>
                     <h6 class="text-sm">{feature.number}</h6>
                     <h4 class="text-xl leading-relaxed mt-4 mb-2 font-bold">{feature.title}</h4>
                     <p class="text-sm text-white/60 mt-auto">{feature.description}</p>

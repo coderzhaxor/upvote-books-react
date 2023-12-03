@@ -1,32 +1,35 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import UserLayout from './layout/UserLayout';
+import LoginLayout from './layout/LoginLayout';
+
 import Home from './pages/Home/Home';
 import Browse from './pages/Browse/Browse';
 import Purchased from './pages/Purchased/Purchased';
 import Vote from './pages/Vote/Vote';
 import About from './pages/About/About';
-import Login from './pages/Login/Login';
+
+import UserProfile from './pages/Profile/UserProfile';
+
+import Login from './pages/Auth/LoginUser';
+import RegisterUser from './pages/Auth/Register';
 
 export default function App() {
     return (
-        <BrowserRouter>
-            {/* <Navbar />
-            <main>
-                <Routes>
-                    <Route exact path="/" Component={Home} />
-                    <Route exact path="/browse" Component={Browse} />
-                    <Route exact path="/purchased" Component={Purchased} />
-                    <Route exact path="/vote" Component={Vote} />
-                    <Route exact path="/about" Component={About} />
-                </Routes>
-            </main>
-            <Footer /> */}
+        <>
+            <UserLayout>
+                <Route index Component={Home} />
+                <Route path="/browse" Component={Browse} />
+                <Route path="/purchased" Component={Purchased} />
+                <Route path="/vote" Component={Vote} />
+                <Route path="/about" Component={About} />
+                <Route path="/profile" Component={UserProfile} />
+            </UserLayout>
 
-            <Routes>
-                <Route exact path="/login" Component={Login} />
-            </Routes>
-        </BrowserRouter>
+            {/* <LoginLayout>
+                <Route path="/login" Component={Login} />
+                <Route path="/signup" Component={RegisterUser} />
+            </LoginLayout> */}
+        </>
     );
 }
