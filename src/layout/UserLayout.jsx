@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 
-const UserLayout = ({ children }) => (
-    <BrowserRouter>
+const UserLayout = () => (
+    <>
         <Navbar />
         <main>
-            <Routes>{children}</Routes>
+            <Outlet />
         </main>
         <Footer />
-    </BrowserRouter>
+    </>
 );
 
 export default UserLayout;

@@ -25,6 +25,17 @@ const RegisterUser = () => {
                     <input type="email" placeholder="youremail@gmail.com" id="email" name="email" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" />
                 </label>
 
+                <div className="flex gap-x-2">
+                    <label htmlFor="npm" className="text-sm flex-1">
+                        NPM
+                        <input type="text" placeholder="Enter your NPM" id="npm" name="npm" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" />
+                    </label>
+                    <label htmlFor="university" className="text-sm flex-1">
+                        University
+                        <input type="text" placeholder="Enter your institution" id="university" name="university" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" />
+                    </label>
+                </div>
+
                 <label htmlFor="password" className="text-sm">
                     Password
                     <input type="password" placeholder="Enter your password here" id="password" name="password" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" />

@@ -3,6 +3,8 @@ const books = [
         id: 1,
         title: 'Luka Kata',
         author: 'Candra Malik',
+        description:
+            'Puisi adalah laboratorium abadi umat manusia, dalam mengolah, memakai, dan memahami bahasa. Waktu, jarak, Tuhan, dan cinta di dalamnya jadi tema yang tak habis dikunyahnya. Sekumpulan puisi Luka Kata ini menjadi bukti, loyalitas sang penyair yang abadi. Memahami itu semua hingga melampaui indra, dengan prolific-nya sang Kyai Muda Candra. Semoga segala pembaca mendapat berkah, dari ini buku yang tekun mencari hidayah.',
         img: '/src/assets/img/book1.png',
         category: 'Romance',
         color: '#AEACAF',

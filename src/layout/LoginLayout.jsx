@@ -1,9 +1,5 @@
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-const LoginLayout = ({ children }) => (
-    <BrowserRouter>
-        <Routes>{children}</Routes>
-    </BrowserRouter>
-);
+const LoginLayout = () => <Outlet />;
 
 export default LoginLayout;

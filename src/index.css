@@ -29,7 +29,3 @@ main .input {
     50% {transform: translateY(0);}
     to {transform: translateY(-4px);}
 }
-
-.profile-menu.active {
-    @apply bg-indigo-600;
-}

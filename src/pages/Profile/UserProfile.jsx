@@ -1,8 +1,8 @@
 import Profile from '../../assets/img/ProfileMedium.png';
-import { NavLink, BrowserRouter, Routes, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import books from '../../data/Api';
-import VoteCard from '../../components/Card/VoteCard';
+import StatusCard from '../../components/Card/StatusCard';
 
 export default function UserProfile() {
     const profileDatas = {
@@ -14,11 +14,11 @@ export default function UserProfile() {
     };
 
     return (
-        <div className="mx-auto max-w-5xl px-8 mt-20 bg-[#2F2F8A]/60 flex flex-col items-center rounded-xl py-10">
+        <div className="mx-auto max-w-6xl px-8 md:mt-20 bg-[#2F2F8A]/60 flex flex-col items-center md:rounded-xl py-10">
             <Header profile={profileDatas} />
-            <section id="book" className="w-3/4">
+            <section id="book" className="w-full">
                 <hr className="my-10 border-white/10" />
-                <SectionBook />
+                <SectionBook books={books} />
             </section>
         </div>
     );
@@ -32,7 +32,7 @@ function Header({ profile }) {
             </div>
             <h2 className="text-xl font-semibold mt-4 mb-1">{profile.name}</h2>
             <h4 className="text-xl text-white/70 font-semibold">{profile.university}</h4>
-            <div className="w-1/2 mt-8">
+            <div className="w-3/4 md:w-1/2 mt-8">
                 <label htmlFor="name">
                     Name
                     <input type="text" id="name" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" name="name" placeholder={profile.name} />
@@ -51,22 +51,27 @@ function Header({ profile }) {
     );
 }
 
-function SectionBook() {
+function SectionBook({ books }) {
     return (
         <>
             <NavSectionBook />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{books.map(<VoteCard books={books} />)}</div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <StatusCard books={books} />
+            </div>
         </>
     );
 }
 
 function NavSectionBook() {
+    const activeStyles = 'bg-indigo-600 px-6 py-3 rounded-md';
+    const normalStyles = 'bg-white/10 px-6 py-3 rounded-md';
+
     return (
-        <div className="flex gap-x-4">
-            <NavLink to="/profile" className="bg-white/10 px-6 py-3 rounded-md profile-menu">
+        <div className="flex gap-x-4 justify-center md:justify-start">
+            <NavLink to="/profile" end className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
                 History Vote
             </NavLink>
-            <NavLink to="/profile/request" className="bg-white/10 px-6 py-3 rounded-md profile-menu">
+            <NavLink to="/profile/request" className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
                 Request Book
             </NavLink>
         </div>

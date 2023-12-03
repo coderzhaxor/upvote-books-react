@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export default function VoteCard({ books }) {
     return (
         <>
             {books.map((book) => (
-                <div className="card inline-flex flex-col p-5 rounded-[48px] bg-white/5" key={book.id}>
+                <Link to={`/browse/${book.id}`} className="card inline-flex flex-col p-5 rounded-[48px] bg-white/5" key={book.id}>
                     <div className="card-header w-full flex justify-center items-center rounded-[32px] min-h-[300px]" style={{ backgroundColor: book.color }}>
                         <div className="card-img rounded-md m-auto overflow-hidden w-full h-full flex justify-center items-center">
                             <img src={book.img} alt={book.title} x />
@@ -24,7 +26,7 @@ export default function VoteCard({ books }) {
                             </a>
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </>
     );
