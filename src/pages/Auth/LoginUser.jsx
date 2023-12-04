@@ -32,7 +32,7 @@ export default function Login() {
                     Forgot password?
                 </Link>
 
-                <Link to={'/'} className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm block text-center">
+                <Link to={'/join'} className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm block text-center">
                     Login
                 </Link>
 
