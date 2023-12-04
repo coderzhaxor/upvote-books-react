@@ -69,12 +69,15 @@ function NavSectionBook() {
 
     return (
         <div className="flex gap-x-4 justify-center md:justify-start">
-            <NavLink to="/profile" end className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
-                History Vote
-            </NavLink>
-            <NavLink to="/profile/request" className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
-                Request Book
-            </NavLink>
+            <div className="flex gap-x-4">
+                <NavLink to="/profile" end className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
+                    History Vote
+                </NavLink>
+                <NavLink to="/profile/request" className={({ isActive }) => (isActive ? activeStyles : normalStyles)}>
+                    Request Book
+                </NavLink>
+            </div>
+            <div className="px-4 py-2 cursor-pointer bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md flex justify-center items-center ml-auto">Logout</div>
         </div>
     );
 }

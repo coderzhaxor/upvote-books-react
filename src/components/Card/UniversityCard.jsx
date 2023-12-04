@@ -13,7 +13,7 @@ export default function UniversityCard({ universities }) {
                         <h4 className="font-semibold text-xl">{university.name}</h4>
                         <span className="text-lg text-white/70">{university.libraryName}</span>
                     </div>
-                    <Link to={`/join/${university.id}`} className="bg-indigo-600 text-center block py-2 rounded-xl">
+                    <Link to={`/join/${university.id}`} className="bg-indigo-600 hover:bg-indigo-700 text-center block py-2 rounded-lg font-medium">
                         Join
                     </Link>
                 </div>

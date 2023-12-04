@@ -11,8 +11,8 @@ export default function VoteCard({ books }) {
                         </div>
                     </div>
                     <div className="card-body w-full mt-3">
-                        <h4 className="mt-4 font-bold text-xl truncate">{book.title}</h4>
-                        <h6 className="text-lg truncate">{book.author}</h6>
+                        <h4 className="mt-4 font-bold text-lg md:text-xl truncate">{book.title}</h4>
+                        <h6 className="text-base md:text-lg truncate">{book.author}</h6>
 
                         <div className="flex mt-4 w-full items-end justify-between">
                             <a href="" className="px-4 py-2 font-semibold bg-white/10 hover:bg-white/20 border border-[#4E46DF4D] rounded-full text-sm">
