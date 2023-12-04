@@ -10,6 +10,7 @@ import UserProfile from './pages/Profile/UserProfile';
 import Login from './pages/Auth/LoginUser';
 import RegisterUser from './pages/Auth/Register';
 import BrowseDetails from './pages/Browse/BrowseDetails';
+import ForgotPassword from './pages/Auth/ForgotPassword';
 
 export default function App() {
     return (
@@ -30,6 +31,7 @@ export default function App() {
                     <Route element={<LoginLayout />}>
                         <Route path="/login" Component={Login} />
                         <Route path="/signup" Component={RegisterUser} />
+                        <Route path="/forgot" Component={ForgotPassword} />
                     </Route>
                 </Routes>
             </BrowserRouter>

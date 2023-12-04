@@ -1,7 +1,7 @@
 import CircleKiri from '../../assets/img/circle_kiri.png';
 import CircleKanan from '../../assets/img/circle_kanan.png';
-
 import Logo from '../../assets/svg/logo-animation.svg';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     return (
@@ -28,11 +28,13 @@ export default function Login() {
                     Password
                     <input type="password" id="password" className="block w-full bg-white/10 py-2 px-3 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" placeholder="Your password" />
                 </label>
-                <a href="/resetpassword" className="text-start underline text-blue-400 mt-3 text-sm">
+                <Link to={'/forgot'} className="text-start underline text-blue-400 mt-3 text-sm">
                     Forgot password?
-                </a>
+                </Link>
 
-                <button className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm">Login</button>
+                <Link to={'/'} className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm block text-center">
+                    Login
+                </Link>
 
                 <span className="text-center mt-4 text-sm">
                     Don't have an account?{' '}

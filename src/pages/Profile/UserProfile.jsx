@@ -1,8 +1,8 @@
 import Profile from '../../assets/img/ProfileMedium.png';
-import { NavLink } from 'react-router-dom';
-
-import books from '../../data/Api';
+import { NavLink, useLocation } from 'react-router-dom';
 import StatusCard from '../../components/Card/StatusCard';
+import BookCard from '../../components/Card/BookCard';
+import books from '../../data/Api';
 
 export default function UserProfile() {
     const profileDatas = {
@@ -13,12 +13,15 @@ export default function UserProfile() {
         pass: 'kurakuraninja12',
     };
 
+    const location = useLocation();
+    const path = location.pathname;
+
     return (
         <div className="mx-auto max-w-6xl px-8 md:mt-20 bg-[#2F2F8A]/60 flex flex-col items-center md:rounded-xl py-10">
             <Header profile={profileDatas} />
             <section id="book" className="w-full">
                 <hr className="my-10 border-white/10" />
-                <SectionBook books={books} />
+                <SectionBook books={books} path={path} />
             </section>
         </div>
     );
@@ -51,13 +54,11 @@ function Header({ profile }) {
     );
 }
 
-function SectionBook({ books }) {
+function SectionBook({ books, path }) {
     return (
         <>
             <NavSectionBook />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                <StatusCard books={books} />
-            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">{path == '/profile' ? <StatusCard books={books} /> : <BookCard books={books} />}</div>
         </>
     );
 }

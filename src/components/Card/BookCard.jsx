@@ -1,6 +1,11 @@
 import React from 'react';
 
 export default function BookCard({ books }) {
+    const styles = {
+        purchased: 'status flex w-full justify-between bg-white/10 px-4 py-2  text-green-500 rounded-md',
+        unPurchased: 'status flex w-full justify-between bg-white/10 px-4 py-2 text-red-500 rounded-md',
+    };
+
     return (
         <>
             {books.map((book) => (
@@ -11,7 +16,7 @@ export default function BookCard({ books }) {
                         </div>
                     </div>
                     <div className="card-body w-full mt-4">
-                        <div className="status flex w-full justify-between bg-white/10 px-4 py-2 text-red-500 rounded-md">
+                        <div className={book.status === 'Purchased' ? styles.purchased : styles.unPurchased}>
                             <span>{book.status}</span>
                             <span>{book.countVote} Vote</span>
                         </div>
