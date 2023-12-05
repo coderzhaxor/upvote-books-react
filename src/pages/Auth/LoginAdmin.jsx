@@ -3,7 +3,7 @@ import CircleKanan from '../../assets/img/circle_kanan.png';
 import Logo from '../../assets/svg/logo-animation.svg';
 import { Link } from 'react-router-dom';
 
-export default function LoginUser() {
+export default function LoginAdmin() {
     return (
         <main className="relative min-h-screen w-full items-center justify-center flex overflow-y-hidden">
             <img src={CircleKiri} className="absolute top-0 left-0 -mt-20 select-none -z-10" />
@@ -26,19 +26,23 @@ export default function LoginUser() {
                 </label>
                 <label htmlFor="Password" className="text-sm">
                     Password
-                    <input type="password" id="password" className="block w-full bg-white/10 py-2 px-3 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" placeholder="Your password" />
+                    <input type="password" id="password" className="block w-full bg-white/10 py-2 px-3 mb-4 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" placeholder="Your password" />
+                </label>
+                <label htmlFor="token" className="text-sm">
+                    Token ID
+                    <input type="token" id="token" className="block w-full bg-white/10 py-2 px-3 mt-2 rounded-sm outline-none ring-1 ring-white/30 hover:ring-blue-200/60" placeholder="Your password" />
                 </label>
                 <Link to={'/forgot'} className="text-start underline text-blue-400 mt-3 text-sm">
                     Forgot password?
                 </Link>
 
-                <Link to={'/join'} className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm block text-center">
+                <Link to={'/admin'} className="px-5 py-2 mt-6 text-lg font-semibold bg-indigo-600 hover:bg-indigo-700 cursor-pointer rounded-sm block text-center">
                     Login
                 </Link>
 
                 <span className="text-center mt-4 text-sm">
                     Don't have an account?{' '}
-                    <a href="/signup" className="underline text-blue-400">
+                    <a href="/admin/signup" className="underline text-blue-400">
                         Signup here
                     </a>
                 </span>
